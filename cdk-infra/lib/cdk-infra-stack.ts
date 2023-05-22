@@ -137,7 +137,7 @@ export class CDKInfraStack extends Stack {
       // Some identity providers use simple names, such as email, while others use URL-formatted attribute names
       // This attribute mapping maps attributes the idp sends to custom attributes you set in cognito
       attributeMapping: {
-        "email": "http://shemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+        "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
         [`custom:${props.envObject.CognitoMappedSuperadminGroupKey}`]: props.envObject.IdentityProviderSAMLGroupKey
       },
     });

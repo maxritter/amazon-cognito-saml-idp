@@ -8,9 +8,9 @@ const path = require('path');
 
 const UI_CONFIG_TEMPLATE = './src/scripts/ui-config.template';
 const UI_CONFIG_FILE = './src/config.js';
-const AWS_REGION = 'us-east-1';
-var envName = "qa"
-var envPrefix = "example-saml-idp"
+const AWS_REGION = '<YOUR_REGION>';
+var envName = "<YOUR_ENV>"
+var envPrefix = "<YOUR_APP_PREFIX>"
 
 const userPoolIdSSMName = '/'+envName+'/'+envPrefix+'/UserPoolId';
 const identityPoolIdSSMName = '/'+envName+'/'+envPrefix+'/IdentityPoolId';

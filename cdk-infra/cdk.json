@@ -31,15 +31,15 @@
     ],
     "ENVIRONMENTS": {
       "qa": {
-        "AccountId":"",
-        "Region":"us-east-1",
-        "EnvironmentStage": "qa",
-        "Prefix":"example-saml-idp",
+        "AccountId":"<YOUR_ACCOUNT_ID>",
+        "Region":"<YOUR_REGION>",
+        "EnvironmentStage": "<YOUR_STAGE>",
+        "Prefix":"<YOUR_APP_PREFIX>",
         "ApplicationVersion": "1.0.0",
-        "IdentityProviderName": "<Identity_provider_name>",
+        "IdentityProviderName": "AzureAd",
         "IdentityProviderType": "SAML",
         "IdentityProviderSuperadminGroupName": "superadmin",
-        "IdentityProviderSAMLGroupKey": "groupMembership",
+        "IdentityProviderSAMLGroupKey": "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups",
         "CognitoMappedSuperadminGroupKey": "groups",
         "SamlMetadataFile": "./SAML/metadata.xml"
       }

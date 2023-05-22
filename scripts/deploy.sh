@@ -4,28 +4,19 @@ set -e
 set -u
 set -o pipefail
 
-SSM_ROOT="example-saml-idp"
+SSM_ROOT="maxritter-saml-idp"
 
 # Running CDK Project
 
 # Starting point is the root directory. Need to chdir
 cd ./cdk-infra
 
-# Install CDK
-echo "===> Installing AWS CDK..."
-npm install -g aws-cdk
-
-# Install Dependencies
-echo "===> Building CDK project..."
-npm install
-npm run build
-
 # Synth
-# echo "===> Running CDK synth..."
-# cdk synth
+echo "===> Running CDK synth..."
+cdk synth
 
 # Bootstraping
-echo "===> Bootstraping account
+echo "===> Bootstraping account"
 cdk bootstrap
 
 # # Deploy
@@ -42,9 +33,6 @@ echo "===> Switching directroy to main"
 cd ..
 pwd
 
-echo "===> Installing UI App dependencies..."
-npm install --force --silent
-
 echo "===> Original Config:"
 head -n 15 ./src/config.js
 
@@ -52,7 +40,7 @@ echo "===> Updating UI Project Config:"
 node ./src/scripts/setup-ui.js
 
 echo "===> Building UI App..."
-npm run build
+yarn run build
 
 echo "===> Building UI Project is done."
 
