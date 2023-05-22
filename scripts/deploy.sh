@@ -4,7 +4,7 @@ set -e
 set -u
 set -o pipefail
 
-SSM_ROOT="maxritter-saml-idp"
+SSM_ROOT="<YOUR_SSM_ROOT>"
 
 # Running CDK Project
 
